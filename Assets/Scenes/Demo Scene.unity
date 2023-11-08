@@ -1464,7 +1464,7 @@ GameObject:
   m_Layer: 0
   m_Name: PlayerObjectsList
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1489,7 +1489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717039030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.381712, y: -4.5560207, z: -7.8452415}
+  m_LocalPosition: {x: -4.381712, y: 8.69, z: -7.8452415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4490,10 +4490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost MP Storage
       objectReference: {fileID: 0}
-    - target: {fileID: 2575168520242144758, guid: a9e9c77438e7ec34b94b76e8e0f3be23, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2951835281537204044, guid: a9e9c77438e7ec34b94b76e8e0f3be23, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4827,10 +4823,6 @@ PrefabInstance:
     - target: {fileID: 6515731028315478404, guid: e00f9db0cba31d0429786bdf78695284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766165465107053340, guid: e00f9db0cba31d0429786bdf78695284, type: 3}
-      propertyPath: m_LayerMask.m_Bits
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00f9db0cba31d0429786bdf78695284, type: 3}

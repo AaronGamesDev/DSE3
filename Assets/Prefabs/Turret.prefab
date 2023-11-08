@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 2822794588084767237}
   - component: {fileID: 2822794586847030347}
   - component: {fileID: 2822794586847030344}
-  - component: {fileID: 3571890581603297887}
   - component: {fileID: 2860699995945199866}
   - component: {fileID: 2822794586847030349}
   - component: {fileID: 2822794586847030345}
@@ -266,19 +265,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &3571890581603297887
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2822794588084767236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 2.5512729, y: 1.7082299, z: 2.549427}
-  m_Center: {x: -0.0009703636, y: 0.8443418, z: -0.000102996826}
 --- !u!64 &2860699995945199866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -305,29 +291,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887099510b26a2742a63279f1ded676d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  online: 0
-  paused: 0
-  powerUsage: 10
-  powerRate: 1
   player: {fileID: 0}
   playerController: {fileID: 0}
-  gun: {fileID: 0}
-  aimSpeed: 15
   tier1: 1
   tier2: 0
   hp: 200
   maxHp: 200
+  regenSpeed: 3
+  regenAmount: 2
+  regenWaitTime: 5
+  attacked: 0
+  appliedStats: 0
+  regenStarted: 0
+  waiting: 0
+  online: 0
+  paused: 0
+  usingPower: 0
+  powerUsage: 10
+  consumptionRate: 1
+  gun: {fileID: 0}
+  aimSpeed: 15
   dmg: 25
-  targetRange: 5
+  fireRate: 4
   enemies: []
   closestDist: 0
   currentTarget: {fileID: 0}
   projectiles: []
   projectileSpawn: {fileID: 2822794586826474182}
   projectilePrefab: {fileID: 5542593565334095490, guid: eb9527b5973a4df44aff5f08b8e46880, type: 3}
-  fireRate: 4
   aimed: 0
-  usingPower: 0
 --- !u!114 &2822794586847030345
 MonoBehaviour:
   m_ObjectHideFlags: 0

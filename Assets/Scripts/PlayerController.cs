@@ -331,9 +331,9 @@ public class PlayerController : MonoBehaviour
 
                     if (Input.GetMouseButtonDown(0) && !isShift)//if mouse1 is clicked and shift is not being held down
                     {
-                        if (!placeHolder.GetComponent<GhostCheck>().collisionDetected)//ghost collision check
+                        if (!placeHolder.GetComponent<GhostCheck>().collisionDetected)//if ghost collision check is false
                         {
-                            if (metal >= metalCost && power >= powerCost)
+                            if (metal >= metalCost && power >= powerCost) //if has enough metal and power to cover the build costs
                             {
                                 GameObject tempPlaceHolder = Instantiate<GameObject>(placeHolder, hit.point + posOffset, placeHolder.transform.rotation);
                                 tempPlaceHolder.AddComponent<BuildProgression>().SetValues(finalObj, buildTime);
@@ -341,12 +341,23 @@ public class PlayerController : MonoBehaviour
                                 power -= powerCost;
 
                             }
-                            else
+                            else //if not enough metal or power to build
                             {
                                 Debug.Log("CANNOT PLACE, NOT ENOUGH RESOURCES");
 
                             }
                             
+                        }
+                        else //if ghost collision check is true
+                        {
+                            Debug.Log("CANNOT PLACE HERE, ghost object is clipping other objects");
+                            
+                            if (metal < metalCost || power < powerCost)//if not enough metal or power to build
+                            {
+                                Debug.Log("CANNOT PLACE, NOT ENOUGH RESOURCES");
+
+                            }
+
                         }
                     }
                     else if (isShift == true)//if shift is being held down

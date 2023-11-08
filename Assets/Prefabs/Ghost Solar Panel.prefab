@@ -101,3 +101,5 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 1
+  colliderSize: {x: 2.5, y: 1.63, z: 2.5}
+  heightOffset: 0.825

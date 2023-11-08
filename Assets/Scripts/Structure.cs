@@ -19,6 +19,16 @@ public class Structure : MonoBehaviour
     public bool regenStarted = false;
     public bool waiting = false;
 
+    private void OnEnable()
+    {
+        GlobalPlayerObjectsList.GlobalList.Add(gameObject);//Adds to Global List when structure is made
+    }
+
+    private void OnDisable()
+    {
+        GlobalPlayerObjectsList.GlobalList.Remove(gameObject);//Removes from Global List when structure is destroyed
+    }
+
     /// <summary>
     /// Sets the player and playerController, calls UpdateStats() which should apply their current tiers stats if not applied before,
     /// then finally calls UpdatePlayerList() which adds it to the player's corresponding List of its Structure Type.
